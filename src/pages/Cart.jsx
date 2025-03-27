@@ -4,7 +4,6 @@ const Cart = () => {
   return (
     <>
       <p>CART</p>
-      <Link to="/">Home</Link>
     </>
   );
 };
