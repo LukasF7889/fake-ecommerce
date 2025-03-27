@@ -1,5 +1,5 @@
 import { Outlet } from react-router;
-import NavBar from "./navBar";
+import NavBar from "./NavBar";
 
 const MainLayout = () => {
 <div>
