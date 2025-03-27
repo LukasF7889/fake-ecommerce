@@ -4,10 +4,8 @@ const getStorage = () => {
   return data;
 };
 
-const saveStorage = (item) => {
-  const data = getStorage();
-  const newData = [...data, item];
-  localStorage.setItem("cart", JSON.stringify(newData));
+const saveStorage = (updatedCart) => {
+  localStorage.setItem("cart", JSON.stringify(updatedCart));
 };
 
 export { getStorage, saveStorage };
