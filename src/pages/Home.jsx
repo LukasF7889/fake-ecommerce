@@ -59,7 +59,9 @@ const Home = ({ products, categories }) => {
     <>
       <p> PRODUCTS </p>
       {categories.map((e, index) => (
-        <button key={index}>{e}</button>
+        <Link className="link" to={`/cat/${e}`} key={index}>
+          {e}
+        </Link>
       ))}
       <div className="grid grid-cols-4 gap-4">
         {products.map((e) => (

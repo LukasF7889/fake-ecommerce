@@ -33,7 +33,10 @@ const App = () => {
           element={<Home products={products} categories={categories} />}
         />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/cat/:catid" element={<Category />} />
+        <Route
+          path="/cat/:catName"
+          element={<Category products={products} categories={categories} />}
+        />
       </Route>
     </Routes>
   );

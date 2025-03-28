@@ -2,6 +2,7 @@ import { useOutletContext } from "react-router";
 
 const Cart = () => {
   const { cart } = useOutletContext();
+
   return (
     <>
       {cart.map((e) => (

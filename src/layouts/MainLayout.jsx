@@ -1,6 +1,6 @@
-import { Outlet, useOutletContext } from "react-router";
+import { Outlet } from "react-router";
 import NavBar from "../components/NavBar";
-import { getStorage, saveStorage } from "../utils/Storage";
+import { getStorage } from "../utils/Storage";
 import { useState } from "react";
 
 const MainLayout = () => {
@@ -10,7 +10,7 @@ const MainLayout = () => {
     <div>
       <header>
         <nav>
-          <NavBar />
+          <NavBar cart={cart} />
         </nav>
       </header>
       <main>
