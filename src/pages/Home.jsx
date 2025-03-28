@@ -1,8 +1,10 @@
-import { Link } from "react-router";
+import { Link, useOutletContext } from "react-router";
 import { useEffect, useState } from "react";
-import { saveStorage, getStorage } from "../components/Storage";
+import { saveStorage, getStorage } from "../utils/Storage";
 
-const Home = ({ products, categories, cart, setCart }) => {
+const Home = ({ products, categories }) => {
+  const { cart, setCart } = useOutletContext();
+
   useEffect(() => {
     const storedCart = getStorage();
     setCart(storedCart || []);

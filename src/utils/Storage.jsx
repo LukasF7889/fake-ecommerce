@@ -1,7 +1,7 @@
 const getStorage = () => {
   const data = JSON.parse(localStorage.getItem("cart")) || [];
-  console.log(data);
-  return data;
+  const filterData = data.filter((e) => e.quantity > 0);
+  return filterData;
 };
 
 const saveStorage = (updatedCart) => {
