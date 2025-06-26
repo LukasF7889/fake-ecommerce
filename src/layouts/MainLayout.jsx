@@ -13,7 +13,7 @@ const MainLayout = () => {
           <NavBar cart={cart} />
         </nav>
       </header>
-      <main>
+      <main className="px-2 md:px-4 py-2 md:py-4 lg:px-[10vw]">
         <Outlet context={{ cart, setCart }} />
       </main>
     </div>

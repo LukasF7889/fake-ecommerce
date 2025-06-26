@@ -16,19 +16,31 @@ const AddToCartButton = ({ product, cart, setCart }) => {
 
   if (cart.find((o) => o.id === product.id)) {
     return (
-      <div className="flex">
-        <button onClick={() => handleUpdate(product.id, -1)}>-</button>
+      <div className="w-auto">
+        <button
+          className="btn btn-outline btn-sm"
+          onClick={() => handleUpdate(product.id, -1)}
+        >
+          -
+        </button>
         <input
           type="text"
+          className="bg-white text-black rounded-2xl mx-2 px-4 w-18"
           value={cart.find((o) => o.id === product.id)?.quantity || 0}
           readOnly
         />
-        <button onClick={() => handleUpdate(product.id, 1)}>+</button>
+        <button
+          className="btn btn-outline btn-sm"
+          onClick={() => handleUpdate(product.id, 1)}
+        >
+          +
+        </button>
       </div>
     );
   } else {
     return (
       <button
+        className="btn btn-primary btn-sm"
         onClick={() => {
           const newItem = { ...product, quantity: 1 };
           const updatedCart = [...cart, newItem];
