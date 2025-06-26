@@ -16,7 +16,7 @@ const AddToCartButton = ({ product, cart, setCart }) => {
 
   if (cart.find((o) => o.id === product.id)) {
     return (
-      <div className="w-auto">
+      <div className="w-auto flex flex-nowrap">
         <button
           className="btn btn-outline btn-sm"
           onClick={() => handleUpdate(product.id, -1)}

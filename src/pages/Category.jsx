@@ -9,8 +9,10 @@ const Category = ({ products, categories }) => {
 
   return (
     <>
-      <Link to="/">Go back</Link>
-      <p>Categories!</p>
+      <Link className="btn btn-outline btn-sm" to="/">
+        ← Go back
+      </Link>
+      <h1 className="mt-4 !text-primary">{catName.toLocaleUpperCase()}</h1>
       <div className="grid grid-cols-4 gap-4">
         {products
           .filter((product) => product.category === catName)

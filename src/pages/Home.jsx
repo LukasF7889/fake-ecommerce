@@ -15,8 +15,9 @@ const Home = ({ products, categories }) => {
 
   return (
     <>
-      <h1 className="mt-4 !text-primary">Top-Deals of the day</h1>
       <CategoryLinks categories={categories} />
+      <h1 className="mt-4 !text-primary">TOP DEALS OF THE DAY</h1>
+
       <ProductGrid products={products} cart={cart} setCart={setCart} />
     </>
   );

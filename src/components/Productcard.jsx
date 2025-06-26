@@ -11,7 +11,7 @@ const Productcard = ({ product, cart, setCart }) => {
         />
       </figure>
       <div className="card-body">
-        <p className="my-0">★{product.rating.rate}</p>
+        <p className="my-0">★ {product.rating.rate}</p>
         <h2 className="card-title my-0">
           {product.title.slice(0, 60)}
           {product.title.length > 59 ? "..." : ""}
@@ -23,7 +23,7 @@ const Productcard = ({ product, cart, setCart }) => {
         </p>
 
         <div className="card-actions justify-end w-full overflow-hidden mt-2">
-          <div className="flex w-full justify-between">
+          <div className="flex w-full justify-between flex-wrap">
             <p className="font-bold text-xl">{product.price}€</p>
             <AddToCartButton product={product} cart={cart} setCart={setCart} />
           </div>

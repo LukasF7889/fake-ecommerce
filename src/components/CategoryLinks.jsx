@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const CategoryLinks = ({ categories }) => {
   return (
-    <div className="flex gap-2 my-2">
+    <div className="flex flex-wrap gap-2 my-2">
       <p className="text-black font-semibold">Categories:</p>
       {categories.map((e, index) => (
         <Link
