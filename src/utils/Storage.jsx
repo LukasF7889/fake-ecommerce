@@ -1,6 +1,6 @@
 const getStorage = () => {
   const data = JSON.parse(localStorage.getItem("cart")) || [];
-  const filterData = data.filter((e) => e.quantity > 0);
+  const filterData = data.filter((e) => e?.quantity > 0);
   return filterData;
 };
 

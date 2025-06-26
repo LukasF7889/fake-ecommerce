@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import NavBar from "../components/NavBar";
 import { getStorage } from "../utils/Storage";
 import { useState } from "react";
+import Skeleton from "../components/Skeleton";
 
 const MainLayout = () => {
   const [cart, setCart] = useState(getStorage());

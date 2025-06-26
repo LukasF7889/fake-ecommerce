@@ -1,14 +1,18 @@
 import { saveStorage, getStorage } from "../utils/Storage";
+import { useEffect } from "react";
 
 const AddToCartButton = ({ product, cart, setCart }) => {
   const handleUpdate = (id, change) => {
-    let updatedCart = cart.map((e) => {
-      if (e.id === id) {
-        const newQuant = e.quantity + change;
-        return { ...e, quantity: Math.max(newQuant, 0) };
-      }
-      return e;
-    });
+    let updatedCart = cart
+      .map((e) => {
+        if (e.id === id) {
+          const newQuant = e.quantity + change;
+          if (newQuant <= 0) return null; //if quantity is zero, set product to null
+          return { ...e, quantity: newQuant };
+        }
+        return e;
+      })
+      .filter((item) => Boolean(item)); //remove all nulls
 
     saveStorage(updatedCart);
     setCart(updatedCart);

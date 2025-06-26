@@ -22,7 +22,6 @@ const App = () => {
     console.log(products);
   }, [prod, cat]);
 
-  if (load) return <p>LOADING</p>;
   if (error) return <p>ERROR</p>;
 
   return (
@@ -30,12 +29,16 @@ const App = () => {
       <Route path="/" element={<MainLayout />}>
         <Route
           index
-          element={<Home products={products} categories={categories} />}
+          element={
+            <Home products={products} categories={categories} load={load} />
+          }
         />
         <Route path="/cart" element={<Cart />} />
         <Route
           path="/cat/:catName"
-          element={<Category products={products} categories={categories} />}
+          element={
+            <Category products={products} categories={categories} load={load} />
+          }
         />
       </Route>
     </Routes>
