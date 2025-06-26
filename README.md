@@ -1,12 +1,31 @@
-# React + Vite
+# 🛒 Fake eCommerce Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **student project** built to practice working with **React**, **Vite**, **React Router**, **Tailwind CSS**, and **daisyUI**. It simulates a basic online shop using a fake product API and showcases dynamic user interactions and responsive design.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ React (with functional components & hooks)  
+- ⚡ Vite (for fast development & builds)  
+- 🌐 React Router (client-side routing)  
+- 🎨 Tailwind CSS (utility-first styling)  
+- 🌈 daisyUI (Tailwind component library)  
+- 🛍️ FakeStore API (RESTful product data)
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ **Product listing** via API fetch from [FakeStoreAPI](https://fakestoreapi.com) with loading state handling
+- ➕ **Add to cart** with quantity controls and localStorage
+- ♻️ **Real-time UI updates** when quantities change or products are removed
+- 🧮 **Cart summary** calculates total prices and allows item editing
+- 💅 **Modern UI** using TailwindCSS and daisyUI components
+
+## 📚 Learning Goals
+
+This project was created to explore and consolidate knowledge in:
+
+- Component structure and state management in React
+- Efficient asset bundling with Vite
+- Routing with dynamic URL parameters
+- Tailwind utility classes and responsive design
+- Integrating third-party APIs
+- User experience improvements through instant feedback and updates
